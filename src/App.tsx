@@ -1,8 +1,9 @@
 import React, { ChangeEvent } from "react";
-import { useAudioMetadata } from "./hooks/useAudioMetadata";
+import { useAudioMetadataWorker } from "./hooks/useAudioMetadataWorker";
 
 const AudioMetadataDisplay: React.FC = () => {
-  const { metadata, loading, error, calculateMetadata } = useAudioMetadata();
+  const { metadata, loading, error, calculateMetadata } =
+    useAudioMetadataWorker();
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
